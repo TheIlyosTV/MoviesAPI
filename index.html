@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movies</title>
+  <link rel="stylesheet" href="./css/output.css">
+</head>
+<body>
+  
+  <main>
+    <section class='my-5 px-4'>
+      <div class="container mx-auto">
+        <div class="flex items-center gap-5">
+          <search>
+            <form class="search-form">
+              <input class='w-full h-10 search-input px-3 border-2 rounded-md' type="search" name="search" placeholder='Search'>
+            </form>
+          </search>
+          
+          <form class='category-filter-form'>
+            <select class="category-select w-full h-10 px-3 border-2 rounded-md" name="category">
+              <option value="all">All</option>
+            </select>
+          </form>
+          
+          <form>
+            <select class='sort-select w-full h-10 px-3 border-2 rounded-md' name="sort">
+              <option value="default">Default</option>
+              <option value="a-z">A-Z</option>
+              <option value="z-a">Z-A</option>
+              <option value="oldest-latest">Oldest - Latest</option>
+              <option value="latest-oldest">Latest - Oldest</option>
+              <option value="rating-highest-lowest">Rating - Highest - Lowest</option> <option value="rating-lowest-highest">Rating - Lowest - Highest</option>
+            </select>
+          </form>
+          
+          <form class='year-filter-form'>
+            <div class='flex items-center gap-5'>
+              <input class='from-year w-full h-10 px-3 border-2 rounded-md' type="number" name="year" placeholder='From year'>
+              
+              <input class='to-year w-full h-10 px-3 border-2 rounded-md' type="number" name="year" placeholder='To year'>
+
+              <button class='w-full h-10 bg-gray-900 text-white rounded-md btn-sm'>Filter</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <section class="my-5 px-4">
+      <div class="container mx-auto">
+        <ul class="movie-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          
+        </ul>
+      </div>
+    </section>
+  </main>
+  
+  
+  <script src='./js/movies.js'></script>
+  <script src='./js/main.js'></script>
+</body>
+</html>
